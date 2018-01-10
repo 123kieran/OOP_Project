@@ -27,11 +27,9 @@ public class Parser implements Runnable{
 	public void run() {
 		
 		try {
-			
-			
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
 			
-			String line = "";
+			String line = " ";
 			
 			while((line = br.readLine())!=null){
 				
@@ -64,8 +62,6 @@ public class Parser implements Runnable{
 			
 			System.out.println("InterruptedException "+e.getMessage());
 		}
-		
-		
 		
 	}
 	
@@ -113,8 +109,6 @@ public class Parser implements Runnable{
 				}
 		
 	}
-	
-	
 	
 	private void addToBuffer(String[] words){
 		
