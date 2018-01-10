@@ -1,23 +1,30 @@
 package ie.gmit.sw;
 
-public class Shingle {
-	private int docId;
-	private int shingleHashCode;
+public class Shingle{
+	
+	private int shingleHash;
+	private int id;
+	
+	public Shingle(int s,int docId){
+		this.shingleHash = s;
+		this.id = docId;
+	}
+	public Shingle(){
+		
+	}
+	
 
-	public Shingle(int docId, int shingleHashCode) {
-		this.docId = docId;
-		this.shingleHashCode = shingleHashCode;
+	public int getId() {
+		return id;
 	}
-	public int getDocId() {
-		return docId;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public void setDocId(int docId) {
-		this.docId = docId;
+	public int getShingleHash() {
+		return shingleHash;
 	}
-	public int getShingleHashCode() {
-		return shingleHashCode;
+	public void setShingleHash(int shingleHash) {
+		this.shingleHash = shingleHash;
 	}
-	public void setShingleHashCode(int shingleHashCode) {
-		this.shingleHashCode = shingleHashCode;
-	}
+
 }

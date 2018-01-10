@@ -1,21 +1,41 @@
 package ie.gmit.sw;
 
 import java.util.Scanner;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 
 public class MenuInterface {
+
+	private Scanner scan ;
+	private String fileName;
+	private int shingleSize;
+	private Launcher runner =new Launcher();
 	
-	private Scanner console = new Scanner(System.in);
-	
-	public void start() {
+	public MenuInterface (){
 		
-		System.out.println("**Document Comparison Service**");
-		System.out.println("Enter 1st text file name: ");
-		String file1Name = console.nextLine();
-		System.out.println("Enter 2nd text file name: ");
-		String file2Name = console.nextLine();
-	
+		
 	}
 	
+	public void start(){
+			
+			scan =  new Scanner(System.in);
+			
+			System.out.println("***Document Comparison Service***");
+			System.out.println("Please Enter the name of File 1:");
+			fileName = scan.next();
+			runner.setFile1(fileName);
+			
+			System.out.println("Please Enter the name of File 2:");	
+			fileName = scan.next();
+			runner.setFile2(fileName);
+			
+			System.out.println("Please Enter the Shingle Size:");		
+			shingleSize = scan.nextInt();
+			runner.setShingleSize(shingleSize);
+			
+			System.out.println("Processing files...");
+			runner.launch();
+	
+			scan.close();
+	
+	}
+
 }
