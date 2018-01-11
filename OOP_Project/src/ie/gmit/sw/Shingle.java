@@ -6,6 +6,7 @@ public class Shingle{
 	private int id;
 	
 	public Shingle(int s,int docId){
+		super();
 		this.shingleHash = s;
 		this.id = docId;
 	}

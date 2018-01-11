@@ -29,7 +29,7 @@ public class Parser implements Runnable{
 		try {
 			BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
 			
-			String line = " ";
+			String line = "";
 			
 			while((line = br.readLine())!=null){
 				
